@@ -3,7 +3,7 @@ document.getElementById('btnEncurtar').addEventListener('click', async () => {
     const resultado = document.getElementById('resultado');
 
     if (!urlOriginal.trim()) {
-        resultado.textContent = "❌ Digite uma URL antes de encurtar!";
+        resultado.textContent = "X Digite uma URL antes de encurtar!";
         resultado.style.color = "red";
         return;
     }
@@ -18,7 +18,7 @@ document.getElementById('btnEncurtar').addEventListener('click', async () => {
         const data = await response.json();
 
         if (!response.ok) {
-            resultado.textContent = "❌ " + data.erro;
+            resultado.textContent = "X" + data.erro;
             resultado.style.color = "red";
             return;
         }
@@ -38,7 +38,7 @@ document.getElementById('btnEncurtar').addEventListener('click', async () => {
         });
 
     } catch (e) {
-        resultado.textContent = "❌ Erro de conexão com o servidor.";
+        resultado.textContent = "X Erro de conexão com o servidor.";
         resultado.style.color = "red";
     }
 });
