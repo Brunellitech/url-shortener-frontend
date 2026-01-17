@@ -9,7 +9,7 @@ document.getElementById('btnEncurtar').addEventListener('click', async () => {
     }
 
     try {
-        const response = await fetch('https://url-shortener-backend-c5yq.onrender.com/encurtar', {
+        const response = await fetch('https://incurta.onrender.com/encurtar', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ url_original: urlOriginal })
@@ -23,7 +23,7 @@ document.getElementById('btnEncurtar').addEventListener('click', async () => {
             return;
         }
 
-        const shortUrl = `https://url-shortener-backend-c5yq.onrender.com/${data.short}`;
+        const shortUrl = `https://incurta.onrender.com/${data.short}`;
 
         resultado.style.color = "black";
         resultado.innerHTML = `
